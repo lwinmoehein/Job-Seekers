@@ -1,0 +1,41 @@
+@import "../../../colors.scss";
+.viewjob-wrapper {
+  display: flex;
+  justify-content: center;
+  .viewjob {
+    padding: 3em;
+    width: 50%;
+    .detail {
+      display: flex;
+      flex-flow: column;
+      .title {
+        font-weight: bolder;
+        margin-bottom: 1em;
+      }
+      .company {
+        font-style: italic;
+        margin-bottom: 0.2em;
+      }
+    }
+    .job-applicants {
+      margin: 2em 0em 2em 0em;
+      padding: 1em;
+      border: 1px solid $primary-color;
+      .title {
+        font-weight: bold;
+        color: $primary-color;
+      }
+      .applicants {
+        display: flex;
+        flex-flow: column;
+        .applicant {
+          background-color: $primary-color;
+          color: white;
+          margin-top: 0.5em;
+          margin-bottom: 0.5em;
+          padding: 1em;
+        }
+      }
+    }
+  }
+}

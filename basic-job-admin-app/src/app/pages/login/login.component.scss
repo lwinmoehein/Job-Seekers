@@ -1,0 +1,18 @@
+.login {
+  padding: 2em;
+  display: flex;
+  justify-content: center;
+  .login-wrapper {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    width: 40%;
+  }
+  .actions-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    button {
+      margin: 2em;
+    }
+  }
+}

@@ -1,0 +1,75 @@
+<div class="update-profile">
+
+<div class="user-info">
+  <div class="user-info-wrapper">
+    <mat-form-field appearance="fill">
+      <mat-label>Name</mat-label>
+      <input matInput [(ngModel)]="profileDetail.name">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Email</mat-label>
+      <input matInput disabled [(ngModel)]="profileDetail.email">
+    </mat-form-field>
+       <mat-form-field appearance="fill">
+      <mat-label>Mobile No</mat-label>
+      <input matInput [(ngModel)]="profileDetail.mobile_number">
+    </mat-form-field>
+    <div><span>view cv file :</span><a [href]="getCvFileLink()">view cv file</a></div>
+    <mat-form-field>
+      <ngx-mat-file-input [(ngModel)]="cv_file">
+      </ngx-mat-file-input>
+   </mat-form-field>
+  </div>
+  <div class="actions">
+    <button mat-button class="warn-btn" (click)="updateUserDetail()" >Update </button>
+  </div>
+</div>
+<div class="experiences">
+  <div class="experience-title">
+    <div class="title">Work Experience</div>
+    <div class="add" (click)="addExperience()">Add</div>
+  </div>
+  <div class="experience-wrapper">
+    <div *ngFor="let experience of workExperiences" class="experience-item">
+     <div class="info">
+        <div>Title : {{experience.job_title}}</div>
+        <div>Company : {{experience.company_name}}</div>
+        <div>Started at : {{experience.started_date}}</div>
+        <div>Industry : {{experience.industry.name}}</div>
+     </div>
+     <div class="actions">
+       <button mat-button class="warn-btn" (click)="deleteExperience(experience)" >delete</button>
+     </div>
+    </div>
+  </div>
+</div>
+<div class="education">
+  <div class="education-title">
+    <div class="title">Education</div>
+    <div class="add" (click)="addEducation()">Add</div>
+
+  </div>
+  <div class="education-wrapper">
+    <div *ngFor="let edu of education" class="education-item">
+      <div class="info">
+        <div>{{edu.highest_level}}</div>
+        <div>{{edu.school_name}}</div>
+        <div>{{edu.completed_date}}</div>
+      </div>
+      <div class="actions">
+        <button mat-button class="warn-btn" (click)="deleteEducation(edu)" >delete</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="skills">
+  <div class="skills-wrapper">
+    <mat-checkbox class="skill" [(ngModel)]="skill.hasSkill" [checked]="skill.hasSkill" *ngFor="let skill of allSkills" class="example-margin">{{skill.name}}</mat-checkbox>
+  </div>
+  <div class="actions">
+    <button mat-button class="warn-btn" (click)="updateSkills()" >Update Skills</button>
+  </div>
+</div>
+
+
+</div>

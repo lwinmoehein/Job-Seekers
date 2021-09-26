@@ -1,0 +1,34 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "colors.scss";
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+nav {
+  background-color: $primary_color;
+  a {
+    color: white !important;
+  }
+}
+.toolbar {
+  background-color: $primary_color;
+  color: white;
+}
+.jobs_list_wrapper {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+}
+button {
+  background-color: $primary_color !important;
+  color: white !important;
+}
+.edit-btn {
+  background-color: white !important;
+  color: $primary_color !important;
+}

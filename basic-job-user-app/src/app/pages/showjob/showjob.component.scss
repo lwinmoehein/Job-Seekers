@@ -1,0 +1,24 @@
+.viewjob-wrapper {
+  display: flex;
+  justify-content: center;
+  .viewjob {
+    padding: 3em;
+    width: 50%;
+    .detail {
+      display: flex;
+      flex-flow: column;
+      .title {
+        font-weight: bolder;
+        margin-bottom: 1em;
+      }
+      .company {
+        font-style: italic;
+        margin-bottom: 0.2em;
+      }
+    }
+    .action {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+.analytics-wrapper {
+  display: flex;
+  flex-flow: column;
+  padding: 2em;
+  align-items: center;
+  justify-content: center;
+  .chart-wrapper {
+    margin: 2em;
+    margin-top: 4em;
+    width: 30%;
+    height: 100%;
+  }
+}

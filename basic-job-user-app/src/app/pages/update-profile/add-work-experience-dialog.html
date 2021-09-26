@@ -1,0 +1,31 @@
+<h1 mat-dialog-title>Add Work Experience</h1>
+<div mat-dialog-content>
+  <mat-form-field appearance="fill">
+    <mat-label>Job Title</mat-label>
+    <input matInput [(ngModel)]="experience.job_title">
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Company Name</mat-label>
+    <input matInput [(ngModel)]="experience.company_name">
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Started Date</mat-label>
+    <input matInput [matDatepicker]="picker" [(ngModel)]="experience.started_date">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Select Industry</mat-label>
+    <mat-select [(value)]="experience.industry_id">
+      <mat-option>Select</mat-option>
+      <mat-option value="1">Hospitality</mat-option>
+      <mat-option value="2">Engineering</mat-option>
+      <mat-option value="3">Other</mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">No Thanks</button>
+  <button mat-button (click)="onOkClick()"  cdkFocusInitial>Ok</button>
+</div>
+

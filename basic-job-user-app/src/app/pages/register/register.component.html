@@ -1,0 +1,25 @@
+<div class="register">
+  <div class="register-wrapper">
+    <mat-form-field appearance="fill">
+      <mat-label>Name</mat-label>
+      <input matInput [(ngModel)]="name">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Email</mat-label>
+      <input matInput [(ngModel)]="email">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Password</mat-label>
+      <input type="password" matInput [(ngModel)]="password">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Password Confirmation</mat-label>
+      <input type="password" matInput [(ngModel)]="password_confirmation">
+    </mat-form-field>
+
+    <div class="actions-wrapper">
+      <button  (click)="onLogin()" mat-button color="primary">Login</button>
+      <button class="primary-btn" (click)="onRegister()" mat-button color="primary">Register</button>
+    </div>
+  </div>
+</div>

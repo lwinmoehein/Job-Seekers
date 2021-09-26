@@ -1,0 +1,15 @@
+<div class="jobs_list_wrapper">
+  <div class="search-wrapper">
+    <form class="search">
+      <input [(ngModel)]="query"  type="text" placeholder="Search.." name="search">
+      <button (click)="onSearchJob()" type="submit"><fa-icon [icon]="faSearch"></fa-icon></button>
+    </form>
+  </div>
+  <div class="jobs_list">
+    <div class="job_item" (click)="onJobClicked(job)" *ngFor="let job of jobs">
+
+      <div class="title">Title : {{job.title}}</div>
+      <div>Company : {{job.company_name}}</div>
+    </div>
+  </div>
+</div>

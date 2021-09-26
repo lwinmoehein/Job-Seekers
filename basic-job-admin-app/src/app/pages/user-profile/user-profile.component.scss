@@ -1,0 +1,19 @@
+@import "../../../colors.scss";
+.profile {
+  display: flex;
+  justify-content: flex-start;
+  padding: 3em;
+
+  .profile-wrapper {
+    display: flex;
+    flex-flow: column;
+    border: 1px solid $primary-color;
+    padding: 2em 4em 2em 4em;
+
+    .actions {
+      margin-top: 2em;
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+}

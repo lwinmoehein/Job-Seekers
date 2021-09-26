@@ -1,0 +1,19 @@
+<div class="add-job">
+  <div class="add-job-wrapper">
+    <mat-form-field appearance="fill">
+      <mat-label>Title</mat-label>
+      <input matInput [(ngModel)]="currentJob.title">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Company Name</mat-label>
+      <input matInput [(ngModel)]="currentJob.company_name">
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Description</mat-label>
+      <textarea matInput [(ngModel)]="currentJob.description"></textarea>
+    </mat-form-field>
+    <div class="actions-wrapper">
+      <button (click)="onJobEdit()" mat-button color="primary">Edit Job</button>
+    </div>
+  </div>
+</div>

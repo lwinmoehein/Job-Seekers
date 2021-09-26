@@ -1,0 +1,23 @@
+<h1 mat-dialog-title>Add Work Experience</h1>
+<div mat-dialog-content>
+  <mat-form-field appearance="fill">
+    <mat-label>Highest Level</mat-label>
+    <input matInput [(ngModel)]="education.highest_level">
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>School Name</mat-label>
+    <input matInput [(ngModel)]="education.school_name">
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Completed Date</mat-label>
+    <input matInput [matDatepicker]="picker" [(ngModel)]="education.completed_date">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">No Thanks</button>
+  <button mat-button (click)="onOkClick()"  cdkFocusInitial>Ok</button>
+</div>
+

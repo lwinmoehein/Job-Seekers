@@ -1,0 +1,52 @@
+<div class="profile">
+
+  <div class="user-info">
+    <div class="user-info-wrapper">
+      <div class="name">Name : {{profileDetail.name}}</div>
+      <div class="name">Email : {{profileDetail.email}}</div>
+      <div class="name">Mobile Number : {{profileDetail.mobile_number}}</div>
+      <div>CV file : <a [href]="getCvFileLink()">view cv file</a></div>
+    </div>
+  </div>
+  <div class="experiences">
+    <div class="experience-title">
+      <div class="title">Work Experience</div>
+    </div>
+    <div class="experience-wrapper">
+      <div *ngFor="let experience of workExperiences" class="experience-item">
+       <div class="info">
+          <div>Title : {{experience.job_title}}</div>
+          <div>Company : {{experience.company_name}}</div>
+          <div>Started at : {{experience.started_date}}</div>
+          <div>Industry : {{experience.industry.name}}</div>
+       </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="education">
+    <div class="education-title">
+      <div class="title">Education</div>
+    </div>
+    <div class="education-wrapper">
+      <div *ngFor="let edu of education" class="education-item">
+        <div class="info">
+          <div>{{edu.highest_level}}</div>
+          <div>{{edu.school_name}}</div>
+          <div>{{edu.completed_date}}</div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="skills">
+    <h4>Skills</h4>
+    <!-- <div class="skills-wrapper">
+      <span class="skill" *ngFor="let skill of allSkills">{{skill.name}}</span>
+    </div> -->
+    <mat-chip-list aria-label="Fish selection">
+      <mat-chip  *ngFor="let skill of userSkills">{{skill.name}}</mat-chip>
+    </mat-chip-list>
+  </div>
+
+  </div>

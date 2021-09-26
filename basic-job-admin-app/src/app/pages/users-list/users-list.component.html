@@ -1,0 +1,18 @@
+
+<div class="users_list_wrapper">
+  <div class="search-wrapper">
+    <form class="search">
+      <input [(ngModel)]="query"  type="text" placeholder="Search.." name="search">
+      <button (click)="onSearchUser()" type="submit"><fa-icon [icon]="faSearch"></fa-icon></button>
+    </form>
+
+  </div>
+  <div class="users_list">
+    <div class="user_item" (click)="onApplicantClick(user)" *ngFor="let user of jobUsers">
+
+      <div class="title">Name : {{user.name}}</div>
+      <div>Email : {{user.email}}</div>
+
+    </div>
+  </div>
+</div>

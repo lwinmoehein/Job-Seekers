@@ -1,0 +1,17 @@
+<div class="viewjob-wrapper">
+  <div class="viewjob">
+
+    <div class="detail">
+      <div class="title">Jobtitle : {{currentJob.title}}</div>
+      <div class="company">Company name : {{currentJob.company_name}}</div>
+      <div>Job Description : {{currentJob.description}}</div>
+    </div>
+
+    <div class="action">
+      <button  [disabled]="isAlreadyApplied" [style.background-color]="isAlreadyApplied?'grey':'green'" (click)="onJobApply()" mat-button color="primary">
+        {{isAlreadyApplied?"Already Applied":"Apply this position"}}
+      </button>
+    </div>
+
+  </div>
+</div>

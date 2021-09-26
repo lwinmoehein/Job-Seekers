@@ -1,0 +1,10 @@
+<mat-toolbar class="toolbar">
+  <span>Job Site Admin Panel</span>
+</mat-toolbar>
+<nav mat-tab-nav-bar *ngIf="isLoggedIn">
+  <a mat-tab-link *ngFor="let link of navLinks" [routerLink]="link.link"
+    [active]="activeLinkIndex==link.index">
+    {{link.label}}
+  </a>
+</nav>
+<router-outlet></router-outlet>

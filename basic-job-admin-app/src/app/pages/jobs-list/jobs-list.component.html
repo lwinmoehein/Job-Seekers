@@ -1,0 +1,25 @@
+
+<div class="jobs_list_wrapper">
+  <div class="search-wrapper">
+    <form class="search">
+      <input [(ngModel)]="query"  type="text" placeholder="Search.." name="search">
+      <button (click)="onSearchJob()" type="submit"><fa-icon [icon]="faSearch"></fa-icon></button>
+    </form>
+    <button class="add_button" mat-fab color="primary" aria-label="Example icon button with a delete icon">
+
+      <a routerLink="/addjob" routerLinkActive="active">
+        <mat-icon>add</mat-icon>
+      </a>
+    </button>
+  </div>
+  <div class="jobs_list">
+    <div class="job_item" (click)="onJobClicked(job)" *ngFor="let job of jobs">
+
+      <div class="title">Title : {{job.title}}</div>
+      <div>Company : {{job.company_name}}</div>
+      <div class="actions">
+        <button class="edit-btn" (click)="editJob(job)" mat-button color="primary">Edit</button>
+      </div>
+    </div>
+  </div>
+</div>

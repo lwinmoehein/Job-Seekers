@@ -1,0 +1,22 @@
+<div class="viewjob-wrapper">
+  <div class="viewjob">
+
+    <div class="detail">
+      <div class="title">Jobtitle : {{currentJob.title}}</div>
+      <div class="company">Company name : {{currentJob.company_name}}</div>
+      <div>Job Description : {{currentJob.description}}</div>
+    </div>
+
+    <div class="job-applicants">
+      <div class="title">
+        Users Who Applied this job
+      </div>
+      <div class="applicants">
+        <div class="applicant" (click)="onApplicantClick(applicant)" *ngFor="let applicant of applicants">
+          <span>{{applicant.name}}</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
